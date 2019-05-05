@@ -13,7 +13,9 @@
     "transpile": "tsc -p scripts",
     "lint": "./node_modules/.bin/tslint -p ./scripts",
     "build": "npm-run-all clean lint transpile",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,10 +39,12 @@
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
     "typescript": "^2.8.1",
-    "winston": "^2.4.1"
+    "winston": "^2.4.1",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "tslint": "^5.9.1",
     "tslint-eslint-rules": "^5.1.0"
-  }
+  },
+  "snyk": true
 }
